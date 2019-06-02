@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TestController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    {% cache 'v1_summary' {time: 300} %}
+        <h1>Hello {{ controller_name }}! ✅</h1>
+    {% endcache %}
+
+    {# delegate to generational strategy #}
+    {% cache 'v2_summary' {gen: item} %}
+        <h1>Hello2 {{ controller_name }}! ✅</h1>
+    {% endcache %}
+
+</div>
+{% endblock %}
