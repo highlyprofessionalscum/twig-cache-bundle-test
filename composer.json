@@ -1,12 +1,17 @@
 {
     "type": "project",
-    "license": "proprietary",
+    "license": "MIT",
     "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/highlyprofessionalscum/twig-cache-extension.git"
+        },
         {
             "type": "git",
             "url": "https://github.com/highlyprofessionalscum/twig-cache-bundle.git"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "php": "^7.1.3",
         "ext-ctype": "*",
@@ -82,6 +87,9 @@
         "symfony": {
             "allow-contrib": false,
             "require": "4.2.*"
+        },
+        "branch-alias": {
+            "dev-master": "1.0.*"
         }
     }
 }
