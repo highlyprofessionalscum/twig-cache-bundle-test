@@ -15,9 +15,11 @@ class TestController extends AbstractController
      */
     public function main(AdapterInterface $cache)
     {
+        $item = ['id' => '1'];
+
         return $this->render('test/index.html.twig', [
             'controller_name' => 'TestController',
-            'item' => new \stdClass(),
+            'item' => (object) $item,
         ]);
     }
 }

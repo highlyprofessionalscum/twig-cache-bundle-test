@@ -14,7 +14,7 @@
     {% endcache %}
 
     {# delegate to generational strategy #}
-    {% cache 'v2_summary' {gen: item} %}
+    {% cache 'v2_summary' ~ item.id {gen: item, time: 300} %}
         <h1>Hello2 {{ controller_name }}! ✅</h1>
     {% endcache %}
 
